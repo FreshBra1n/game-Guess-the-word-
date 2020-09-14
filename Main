@@ -1,0 +1,46 @@
+<head>
+
+<body>
+    <script >
+  var words= [
+    "telephone",
+    "headphones",
+    "volume",
+    "cup",
+    "github",
+    "key"
+];
+
+var word = words [Math.floor( Math.random()) * words.length ];
+
+var answerArray= [];
+for (let i = 0; i < word.length; i++) {
+    answerArray[i] = "_";            
+}
+var remainingLetters= word.length;
+while (remainingLetters > 0){  
+alert(answerArray.join (""));
+var guess = prompt ("Guess the letter or click 'Cancel' to exit the game!");
+if (guess=== null){
+    break;
+}else if (guess.length!==1){
+    alert("One letter!")
+    
+}else{
+    //обновление состояния игры
+}
+for (let j = 0; j < word.length; j++) {
+    if (word[j]===guess){
+        answerArray[j]=guess;
+        remainingLetters--;
+    }           
+}
+}
+alert(answerArray.join (""));
+alert("Great! a word was made up " + word);
+
+
+    </script>
+
+</body>
+</head>
